@@ -1,0 +1,18 @@
+/* Google Font - Outfit */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+                        
+.outfit {
+    font-family: "Outfit", sans-serif;
+}
+
+.text-primary-color{
+    color: #080808;
+}
+
+.bg-secondary-color {
+    background-color: #0874F2;
+}
+
+html {
+    background: #1E1E1E;
+}
