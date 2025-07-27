@@ -18,26 +18,101 @@
     </head>
 
     <body class="outfit text-primary-color">
-        <main class="flex justify-center mt-10">
-            <div class="mockup-phone bg-[#F4F5F7] border-none rounded-3xl">
-                <div class="mockup-phone-display rounded-none">
+        <main class="flex justify-center py-10">
+            <div class="mockup-phone bg-[#F4F5F7] border-none rounded-3xl p-0">
+                <div class="mockup-phone-display rounded-none w-[450px] h-auto">
 
                     <!-- Header Part -->
-                    <div class="bg-white">
+                    <div class="bg-white py-8">
                         <!-- Available Balance -->
                         <div class="stats">
-                            <div>
-                                <img src="assets/img/Group.png" alt="">
+                            <div class="flex content-center justify-center flex-wrap pl-4">
+                                <img src="assets/img/Group.png" alt="Logo" class="max-w-[70%]">
                             </div>
-                            <div class="stat">
+                            <div class="stat px-0">
                                 <div class="stat-value text-lg">$45000</div>
                                 <div class="stat-desc text-sm text-primary-color opacity-50">Available Balance</div>
                             </div>
                         </div>
 
-                        <div class="divider"></div>
+                        <!-- Divider -->
+                        <div class="divider mt-0 h-2"></div>
+
+                        <!-- Menu -->
+                        <div class="px-6 mt-8">
+                            <!-- Intro -->
+                            <div class="mb-6">
+                                <h1 class="flex flex-row gap-1 mb-4 text-2xl font-bold">
+                                    <img class="w-[8%]" src="assets/img/campfire.png" alt="">
+                                    Welcome to Payooo!
+                                </h1>
+                                <p class="opacity-50 leading-relaxed">Enjoy easy and convenient financial services with us. Cashout charge is low and you can also</p>
+                            </div>
+
+                            <!-- Menu Buttons -->
+                            <div class="grid grid-cols-3 gap-4">
+                                <!-- Add Money Button -->
+                                <button class="btn btn-lg flex-col bg-transparent rounded-xl h-auto px-0 py-5 text-sm font-normal focus:border-[#0874F2]">
+                                    <img src="assets/img/wallet1.png" alt="">
+                                    <p class="opacity-70">Add Money</p>
+                                </button>
+
+                                <!-- Cashout Button -->
+                                <button class="btn btn-lg flex-col bg-transparent rounded-xl h-auto px-0 py-5 text-sm font-normal focus:border-[#0874F2]">
+                                    <img src="assets/img/send1.png" alt="">
+                                    <p class="opacity-70">Cashout</p>
+                                </button>
+
+                                <!-- Transfer Money Button -->
+                                <button class="btn btn-lg flex-col bg-transparent rounded-xl h-auto px-0 py-5 text-sm font-normal focus:border-[#0874F2]">
+                                    <img src="assets/img/money1.png" alt="">
+                                    <p class="opacity-70">Transfer Money</p>
+                                </button>
+
+                                <!-- Get Bonus Button -->
+                                <button class="btn btn-lg flex-col bg-transparent rounded-xl h-auto px-0 py-5 text-sm font-normal focus:border-[#0874F2]">
+                                    <img src="assets/img/bonus1.png" alt="">
+                                    <p class="opacity-70">Get Bonus</p>
+                                </button>
+
+                                <!-- Pay Bill Button -->
+                                <button class="btn btn-lg flex-col bg-transparent rounded-xl h-auto px-0 py-5 text-sm font-normal focus:border-[#0874F2]">
+                                    <img src="assets/img/purse1.png" alt="">
+                                    <p class="opacity-70">Pay Bill</p>
+                                </button>
+
+                                <!-- Transactions Button -->
+                                <button class="btn btn-lg flex-col bg-transparent rounded-xl h-auto px-0 py-5 text-sm font-normal focus:border-[#0874F2]">
+                                    <img src="assets/img/transaction1.png" alt="">
+                                    <p class="opacity-70">Transactions</p>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
 
 
+                    <!-- Add money form Starts here -->
+                    <div class="px-6 mt-8 pb-16">
+                        <h2 class="mb-5 text-lg font-semibold">Add Money</h2>
+                        <div class="card bg-white rounded-3xl shrink-0 shadow-xl">
+                            <form class="card-body p-8">
+                                <fieldset class="fieldset gap-3 text-base font-medium">
+                                    <label class="opacity-70">Select A Bank</label>
+                                    <input id="phone-number" type="text" class="input p-6 w-auto h-14 bg-[#F4F5F7] text-base font-light rounded-full border-none focus:outline-none focus:shadow-none" placeholder="Select bank" required/>
+
+                                    <label class="opacity-70">Bank Account Number</label>
+                                    <input id="phone-number" type="text" class="input p-6 w-auto h-14 bg-[#F4F5F7] text-base font-light rounded-full border-none focus:outline-none focus:shadow-none" placeholder="Enter 11 digit account number" required/>
+
+                                    <label class="opacity-70">Amount to Add</label>
+                                    <input id="phone-number" type="text" class="input p-6 w-auto h-14 bg-[#F4F5F7] text-base font-light rounded-full border-none focus:outline-none focus:shadow-none" placeholder="Add amount to withdraw" required/>
+
+                                    <label class="opacity-70">Pin Number</label>
+                                    <input id="pin-number" type="password" class="input p-6 w-auto h-14 bg-[#F4F5F7] text-base font-light rounded-full border-none focus:outline-none focus:shadow-none" placeholder="Enter 4 digit pin number" required/>
+
+                                    <button id="btn-login" class="btn bg-secondary-color mt-4 p-6 w-auto h-14 rounded-full text-xl text-white">Add Money</button>
+                                </fieldset>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -47,5 +122,7 @@
 
         <!-- Tailwind CSS CDN link -->
         <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <!-- Home JS file -->
+        <script src="assets/js/home.js"></script>
     </body>
 </html>
