@@ -98,18 +98,23 @@
                             <form class="card-body p-8">
                                 <fieldset class="fieldset gap-3 text-base font-medium">
                                     <label class="opacity-70">Select A Bank</label>
-                                    <input id="phone-number" type="text" class="input p-6 w-auto h-14 bg-[#F4F5F7] text-base font-light rounded-full border-none focus:outline-none focus:shadow-none" placeholder="Select bank" required/>
+                                    <select class="select input px-6 w-auto h-14 bg-[#F4F5F7] text-base font-light rounded-full border-none focus:outline-none focus:shadow-none" required>
+                                        <option disabled selected>Select a bank</option>
+                                        <option>Islami Bank</option>
+                                        <option>NRBC Bank</option>
+                                        <option>Dutch Bangla Bank</option>
+                                    </select>
 
                                     <label class="opacity-70">Bank Account Number</label>
-                                    <input id="phone-number" type="text" class="input p-6 w-auto h-14 bg-[#F4F5F7] text-base font-light rounded-full border-none focus:outline-none focus:shadow-none" placeholder="Enter 11 digit account number" required/>
+                                    <input type="text" class="input px-6 w-auto h-14 bg-[#F4F5F7] text-base font-light rounded-full border-none focus:outline-none focus:shadow-none" placeholder="Enter 11 digit account number" required/>
 
                                     <label class="opacity-70">Amount to Add</label>
-                                    <input id="phone-number" type="text" class="input p-6 w-auto h-14 bg-[#F4F5F7] text-base font-light rounded-full border-none focus:outline-none focus:shadow-none" placeholder="Add amount to withdraw" required/>
+                                    <input id="adding-amount" type="text" class="input px-6 w-auto h-14 bg-[#F4F5F7] text-base font-light rounded-full border-none focus:outline-none focus:shadow-none" placeholder="Add amount to withdraw" required/>
 
                                     <label class="opacity-70">Pin Number</label>
-                                    <input id="pin-number" type="password" class="input p-6 w-auto h-14 bg-[#F4F5F7] text-base font-light rounded-full border-none focus:outline-none focus:shadow-none" placeholder="Enter 4 digit pin number" required/>
+                                    <input id="pin-number" type="password" class="input px-6 w-auto h-14 bg-[#F4F5F7] text-base font-light rounded-full border-none focus:outline-none focus:shadow-none" placeholder="Enter 4 digit pin number" required/>
 
-                                    <button id="btn-login" class="btn bg-secondary-color mt-4 p-6 w-auto h-14 rounded-full text-xl text-white">Add Money</button>
+                                    <button id="btn-add-money" class="btn bg-secondary-color mt-4 w-auto h-14 rounded-full text-xl text-white">Add Money</button>
                                 </fieldset>
                             </form>
                         </div>
