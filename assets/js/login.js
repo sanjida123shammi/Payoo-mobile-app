@@ -26,7 +26,7 @@ document.getElementById('btn-login')
         const phoneNumber = document.getElementById('phone-number').value;
         const pinNumber = document.getElementById('pin-number').value;
 
-        if (phoneNumber === '01715724292' && pinNumber === '15973') {
+        if (phoneNumber === '01715724292' && pinNumber === '717270') {
             window.location.href = '/home.html'
         }
     })

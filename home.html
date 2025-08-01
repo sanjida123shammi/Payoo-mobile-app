@@ -24,15 +24,26 @@
 
                     <!-- Header Part -->
                     <div class="bg-white py-8">
-                        <!-- Available Balance -->
-                        <div class="stats">
-                            <div class="flex content-center justify-center flex-wrap pl-4">
-                                <img src="assets/img/Group.png" alt="Logo" class="max-w-[70%]">
+                        <!-- Available Balance & Log Out Button -->
+                        <div class="flex justify-between items-center pl-4 pr-6">
+                            <div class="stats">
+                                <div class="flex content-center justify-center flex-wrap">
+                                    <img src="assets/img/Group.png" alt="Logo" class="max-w-[70%]">
+                                </div>
+                                <div class="stat px-0">
+                                    <!-- Available Balance -->
+                                    <div class="stat-value text-xl font-bold">$<span id="balance">45000</span></div>
+                                    <div class="stat-desc text-sm text-primary-color opacity-50">Available Balance</div>
+                                </div>
                             </div>
-                            <div class="stat px-0">
-                                <div class="stat-value text-lg">$45000</div>
-                                <div class="stat-desc text-sm text-primary-color opacity-50">Available Balance</div>
-                            </div>
+
+                            <!-- Log Out Button -->
+                            <div>
+                                <button class="btn bg-transparent rounded-lg">
+                                    <img src="assets/img/logout.png" alt="">
+                                    <span class="ml-1 text-[#080808]/60 font-normal">Log Out</span>
+                                </button>
+                            </div> 
                         </div>
 
                         <!-- Divider -->
@@ -51,38 +62,38 @@
 
                             <!-- Menu Buttons -->
                             <div class="grid grid-cols-3 gap-4">
-                                <!-- Add Money Button -->
-                                <button class="btn btn-lg flex-col bg-transparent rounded-xl h-auto px-0 py-5 text-sm font-normal focus:border-[#0874F2]">
+                                <!-- Showing Add Money Button -->
+                                <button id="btn-show-add-money" class="btn btn-lg flex-col bg-transparent rounded-xl h-auto px-0 py-5 text-sm font-normal focus:border-[#0874F2]">
                                     <img src="assets/img/wallet1.png" alt="">
                                     <p class="opacity-70">Add Money</p>
                                 </button>
 
-                                <!-- Cashout Button -->
-                                <button class="btn btn-lg flex-col bg-transparent rounded-xl h-auto px-0 py-5 text-sm font-normal focus:border-[#0874F2]">
+                                <!-- Showing Cashout Button -->
+                                <button id="btn-show-cashout" class="btn btn-lg flex-col bg-transparent rounded-xl h-auto px-0 py-5 text-sm font-normal focus:border-[#0874F2]">
                                     <img src="assets/img/send1.png" alt="">
                                     <p class="opacity-70">Cashout</p>
                                 </button>
 
-                                <!-- Transfer Money Button -->
-                                <button class="btn btn-lg flex-col bg-transparent rounded-xl h-auto px-0 py-5 text-sm font-normal focus:border-[#0874F2]">
+                                <!-- Showing Transfer Money Button -->
+                                <button id="btn-show-transfer" class="btn btn-lg flex-col bg-transparent rounded-xl h-auto px-0 py-5 text-sm font-normal focus:border-[#0874F2]">
                                     <img src="assets/img/money1.png" alt="">
                                     <p class="opacity-70">Transfer Money</p>
                                 </button>
 
-                                <!-- Get Bonus Button -->
-                                <button class="btn btn-lg flex-col bg-transparent rounded-xl h-auto px-0 py-5 text-sm font-normal focus:border-[#0874F2]">
+                                <!-- Showing Get Bonus Button -->
+                                <button id="btn-show-bonus" class="btn btn-lg flex-col bg-transparent rounded-xl h-auto px-0 py-5 text-sm font-normal focus:border-[#0874F2]">
                                     <img src="assets/img/bonus1.png" alt="">
                                     <p class="opacity-70">Get Bonus</p>
                                 </button>
 
-                                <!-- Pay Bill Button -->
-                                <button class="btn btn-lg flex-col bg-transparent rounded-xl h-auto px-0 py-5 text-sm font-normal focus:border-[#0874F2]">
+                                <!-- Showing Pay Bill Button -->
+                                <button id="btn-show-pay-bill" class="btn btn-lg flex-col bg-transparent rounded-xl h-auto px-0 py-5 text-sm font-normal focus:border-[#0874F2]">
                                     <img src="assets/img/purse1.png" alt="">
                                     <p class="opacity-70">Pay Bill</p>
                                 </button>
 
-                                <!-- Transactions Button -->
-                                <button class="btn btn-lg flex-col bg-transparent rounded-xl h-auto px-0 py-5 text-sm font-normal focus:border-[#0874F2]">
+                                <!-- Showing Transactions Button -->
+                                <button id="btn-show-transactions" class="btn btn-lg flex-col bg-transparent rounded-xl h-auto px-0 py-5 text-sm font-normal focus:border-[#0874F2]">
                                     <img src="assets/img/transaction1.png" alt="">
                                     <p class="opacity-70">Transactions</p>
                                 </button>
@@ -91,12 +102,13 @@
                     </div>
 
 
-                    <!-- Add money form Starts here -->
-                    <div class="px-6 mt-8 pb-16">
+                    <!-- Add money form Start -->
+                    <div id="add-money-form" class="px-6 mt-8 pb-16">
                         <h2 class="mb-5 text-lg font-semibold">Add Money</h2>
                         <div class="card bg-white rounded-3xl shrink-0 shadow-xl">
                             <form class="card-body p-8">
                                 <fieldset class="fieldset gap-3 text-base font-medium">
+                                    <!-- Select A Bank -->
                                     <label class="opacity-70">Select A Bank</label>
                                     <select class="select input px-6 w-auto h-14 bg-[#F4F5F7] text-base font-light rounded-full border-none focus:outline-none focus:shadow-none" required>
                                         <option disabled selected>Select a bank</option>
@@ -105,20 +117,52 @@
                                         <option>Dutch Bangla Bank</option>
                                     </select>
 
+                                    <!-- Bank Account Number -->
                                     <label class="opacity-70">Bank Account Number</label>
-                                    <input type="text" class="input px-6 w-auto h-14 bg-[#F4F5F7] text-base font-light rounded-full border-none focus:outline-none focus:shadow-none" placeholder="Enter 11 digit account number" required/>
+                                    <input type="text" class="input px-6 w-auto h-14 bg-[#F4F5F7] text-base font-light rounded-full border-none focus:outline-none focus:shadow-none" placeholder="Enter 11 digit account number"/>
 
+                                    <!-- Amount to add -->
                                     <label class="opacity-70">Amount to Add</label>
-                                    <input id="adding-amount" type="text" class="input px-6 w-auto h-14 bg-[#F4F5F7] text-base font-light rounded-full border-none focus:outline-none focus:shadow-none" placeholder="Add amount to withdraw" required/>
+                                    <input id="adding-amount" type="text" class="input px-6 w-auto h-14 bg-[#F4F5F7] text-base font-light rounded-full border-none focus:outline-none focus:shadow-none" placeholder="Enter amount to add" required/>
 
+                                    <!-- Pin Number -->
                                     <label class="opacity-70">Pin Number</label>
                                     <input id="pin-number" type="password" class="input px-6 w-auto h-14 bg-[#F4F5F7] text-base font-light rounded-full border-none focus:outline-none focus:shadow-none" placeholder="Enter 4 digit pin number" required/>
 
+                                    <!-- Add money button -->
                                     <button id="btn-add-money" class="btn bg-secondary-color mt-4 w-auto h-14 rounded-full text-xl text-white">Add Money</button>
                                 </fieldset>
                             </form>
                         </div>
                     </div>
+                    <!-- Add money form End -->
+
+
+                    <!-- Cash Out form Start -->
+                    <div id="cashout-form" class="hidden px-6 mt-8 pb-16">
+                        <h2 class="mb-5 text-lg font-semibold">Cash Out</h2>
+                        <div class="card bg-white rounded-3xl shrink-0 shadow-xl">
+                            <form class="card-body p-8">
+                                <fieldset class="fieldset gap-3 text-base font-medium">
+                                    <!-- Agent Number -->
+                                    <label class="opacity-70">Agent Number</label>
+                                    <input type="text" class="input px-6 w-auto h-14 bg-[#F4F5F7] text-base font-light rounded-full border-none focus:outline-none focus:shadow-none" placeholder="Enter 11 digit number"/>
+
+                                    <!-- Amount to Cash out -->
+                                    <label class="opacity-70">Amount</label>
+                                    <input id="cashout-amount" type="text" class="input px-6 w-auto h-14 bg-[#F4F5F7] text-base font-light rounded-full border-none focus:outline-none focus:shadow-none" placeholder="Enter amount to withdraw" required/>
+
+                                    <!-- Pin Number -->
+                                    <label class="opacity-70">Pin Number</label>
+                                    <input id="cashout-pin-number" type="password" class="input px-6 w-auto h-14 bg-[#F4F5F7] text-base font-light rounded-full border-none focus:outline-none focus:shadow-none" placeholder="Enter 4 digit pin number" required/>
+
+                                    <!-- Add money button -->
+                                    <button id="btn-withdraw-money" class="btn bg-secondary-color mt-4 w-auto h-14 rounded-full text-xl text-white">Withdraw Money</button>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- Cash Out form End -->
                 </div>
             </div>
         </main>
@@ -128,6 +172,9 @@
         <!-- Tailwind CSS CDN link -->
         <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
         <!-- Home JS file -->
-        <script src="assets/js/home.js"></script>
+        <!-- <script src="assets/js/home.js"></script> -->
+        <script src="assets/js/addMoney.js"></script>
+        <script src="assets/js/cashOut.js"></script>
+        <script src="assets/js/features.js"></script>
     </body>
 </html>
