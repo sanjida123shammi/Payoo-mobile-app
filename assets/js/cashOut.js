@@ -4,20 +4,45 @@ document.getElementById('btn-withdraw-money').
     addEventListener('click', function(event){
         event.preventDefault();
 
-        const cashoutAmount = document.getElementById('cashout-amount').value;
-        const cashoutPin = document.getElementById('cashout-pin-number').value;
+        const cashoutAmount = getInputFieldValueById('cashout-amount');
+        const cashoutPin = getInputFieldValueById('cashout-pin-number');
 
-        if (cashoutPin === '717270') {
-            const balance = document.getElementById('balance').innerText;
-            const newBalance = parseFloat(balance) - parseFloat(cashoutAmount);
+        // Preventing form submit if th e input is a NaN
+        if (isNaN(cashoutAmount)) {
+            alert('Please enter the cashout amount');
+            return;
+        };        
+
+        // Pin number verifying
+        if (cashoutPin === 717270) {
+            const balance = getTextValueById('balance');
+
+            // Alert of Insufficient balance
+            if (cashoutAmount > balance) {
+                alert('You have insufficient balance');
+                return;
+            };
+
+            const newBalance = balance - cashoutAmount;
 
             document.getElementById('balance').innerText = newBalance;
 
+            // add to transaction history
+            const div = document.createElement('div');
+            div.classList.add('bg-red-200');
+            div.classList.add('p-4');
+            div.innerHTML = `
+                <p class="font-semibold">
+                    ${cashoutAmount} tk has been deducted. New balance is ${newBalance} tk.
+                </p>
+            `;
+            document.getElementById('transaction-history').appendChild(div);
+
             // Clear the input fields
-            document.getElementById('cashout-amount').value = "";
-            document.getElementById('cashout-pin-number').value = "";
+            clearInputField('cashout-amount');
+            clearInputField('cashout-pin-number');
         } 
         else {
-            alert('Failed to withdraw!')
+            alert('Failed to withdraw!');
         }
 })

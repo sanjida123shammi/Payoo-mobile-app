@@ -20,128 +20,133 @@
     <body class="outfit text-primary-color">
         <main class="flex justify-center py-10">
             <div class="mockup-phone bg-[#F4F5F7] border-none rounded-3xl p-0">
-                <div class="mockup-phone-display rounded-none w-[450px] h-auto">
+                <div class="mockup-phone-display rounded-none w-[450px] h-[870px] overflow-auto">
 
-                    <!-- Header Part -->
-                    <div class="bg-white py-8">
-                        <!-- Available Balance & Log Out Button -->
-                        <div class="flex justify-between items-center pl-4 pr-6">
-                            <div class="stats">
-                                <div class="flex content-center justify-center flex-wrap">
-                                    <img src="assets/img/Group.png" alt="Logo" class="max-w-[70%]">
+                    <!-- Header Section -->
+                    <header>
+                        <div class="bg-white py-8">
+                            <!-- Available Balance & Log Out Button -->
+                            <div class="flex justify-between items-center pl-4 pr-6">
+                                <div class="stats">
+                                    <div class="flex content-center justify-center flex-wrap">
+                                        <img src="assets/img/Group.png" alt="Logo" class="max-w-[70%]">
+                                    </div>
+                                    <div class="stat px-0">
+                                        <!-- Available Balance -->
+                                        <div class="stat-value text-xl font-bold">$<span id="balance">45000</span></div>
+                                        <div class="stat-desc text-sm text-primary-color opacity-50">Available Balance</div>
+                                    </div>
                                 </div>
-                                <div class="stat px-0">
-                                    <!-- Available Balance -->
-                                    <div class="stat-value text-xl font-bold">$<span id="balance">45000</span></div>
-                                    <div class="stat-desc text-sm text-primary-color opacity-50">Available Balance</div>
+
+                                <!-- Log Out Button -->
+                                <div>
+                                    <button class="btn bg-transparent rounded-lg">
+                                        <img src="assets/img/logout.png" alt="">
+                                        <span class="ml-1 text-[#080808]/60 font-normal">Log Out</span>
+                                    </button>
+                                </div> 
+                            </div>
+
+                            <!-- Divider -->
+                            <div class="divider mt-0 h-2"></div>
+
+                            <!-- Menu -->
+                            <div class="px-6 mt-8">
+                                <!-- Intro -->
+                                <div class="mb-6">
+                                    <h1 class="flex flex-row gap-1 mb-4 text-2xl font-bold">
+                                        <img class="w-[8%]" src="assets/img/campfire.png" alt="">
+                                        Welcome to Payooo!
+                                    </h1>
+                                    <p class="opacity-50 leading-relaxed">Enjoy easy and convenient financial services with us. Cashout charge is low and you can also</p>
+                                </div>
+
+                                <!-- Menu Buttons -->
+                                <div class="grid grid-cols-3 gap-4">
+                                    <!-- Showing Add Money Button -->
+                                    <button id="btn-show-add-money" class="btn btn-lg flex-col bg-transparent rounded-xl h-auto px-0 py-5 text-sm font-normal focus:border-[#0874F2]">
+                                        <img src="assets/img/wallet1.png" alt="">
+                                        <p class="opacity-70">Add Money</p>
+                                    </button>
+
+                                    <!-- Showing Cashout Button -->
+                                    <button id="btn-show-cashout" class="btn btn-lg flex-col bg-transparent rounded-xl h-auto px-0 py-5 text-sm font-normal focus:border-[#0874F2]">
+                                        <img src="assets/img/send1.png" alt="">
+                                        <p class="opacity-70">Cashout</p>
+                                    </button>
+
+                                    <!-- Showing Transfer Money Button -->
+                                    <button id="btn-show-transfer" class="btn btn-lg flex-col bg-transparent rounded-xl h-auto px-0 py-5 text-sm font-normal focus:border-[#0874F2]">
+                                        <img src="assets/img/money1.png" alt="">
+                                        <p class="opacity-70">Transfer Money</p>
+                                    </button>
+
+                                    <!-- Showing Get Bonus Button -->
+                                    <button id="btn-show-bonus" class="btn btn-lg flex-col bg-transparent rounded-xl h-auto px-0 py-5 text-sm font-normal focus:border-[#0874F2]">
+                                        <img src="assets/img/bonus1.png" alt="">
+                                        <p class="opacity-70">Get Bonus</p>
+                                    </button>
+
+                                    <!-- Showing Pay Bill Button -->
+                                    <button id="btn-show-pay-bill" class="btn btn-lg flex-col bg-transparent rounded-xl h-auto px-0 py-5 text-sm font-normal focus:border-[#0874F2]">
+                                        <img src="assets/img/purse1.png" alt="">
+                                        <p class="opacity-70">Pay Bill</p>
+                                    </button>
+
+                                    <!-- Showing Transactions Button -->
+                                    <button id="btn-show-transactions" class="btn btn-lg flex-col bg-transparent rounded-xl h-auto px-0 py-5 text-sm font-normal focus:border-[#0874F2]">
+                                        <img src="assets/img/transaction1.png" alt="">
+                                        <p class="opacity-70">Transactions</p>
+                                    </button>
                                 </div>
                             </div>
-
-                            <!-- Log Out Button -->
-                            <div>
-                                <button class="btn bg-transparent rounded-lg">
-                                    <img src="assets/img/logout.png" alt="">
-                                    <span class="ml-1 text-[#080808]/60 font-normal">Log Out</span>
-                                </button>
-                            </div> 
                         </div>
+                    </header>
 
-                        <!-- Divider -->
-                        <div class="divider mt-0 h-2"></div>
 
-                        <!-- Menu -->
-                        <div class="px-6 mt-8">
-                            <!-- Intro -->
-                            <div class="mb-6">
-                                <h1 class="flex flex-row gap-1 mb-4 text-2xl font-bold">
-                                    <img class="w-[8%]" src="assets/img/campfire.png" alt="">
-                                    Welcome to Payooo!
-                                </h1>
-                                <p class="opacity-50 leading-relaxed">Enjoy easy and convenient financial services with us. Cashout charge is low and you can also</p>
+                    <!-- Add Money Section Start -->                        
+                        <section id="add-money-section" class="px-6 mt-8 pb-16">
+                            <h2 class="mb-5 text-lg font-semibold">Add Money</h2>
+                            <div class="card bg-white rounded-3xl shrink-0 shadow-xl">
+                                <!-- Add money form Start -->
+                                <form class="card-body p-8">
+                                    <fieldset class="fieldset gap-3 text-base font-medium">
+                                        <!-- Select A Bank -->
+                                        <label class="opacity-70">Select A Bank</label>
+                                        <select class="select input px-6 w-auto h-14 bg-[#F4F5F7] text-base font-light rounded-full border-none focus:outline-none focus:shadow-none" required>
+                                            <option disabled selected>Select a bank</option>
+                                            <option>Islami Bank</option>
+                                            <option>NRBC Bank</option>
+                                            <option>Dutch Bangla Bank</option>
+                                        </select>
+
+                                        <!-- Bank Account Number -->
+                                        <label class="opacity-70">Bank Account Number</label>
+                                        <input type="text" class="input px-6 w-auto h-14 bg-[#F4F5F7] text-base font-light rounded-full border-none focus:outline-none focus:shadow-none" placeholder="Enter 11 digit account number"/>
+
+                                        <!-- Amount to add -->
+                                        <label class="opacity-70">Amount to Add</label>
+                                        <input id="adding-amount" type="text" class="input px-6 w-auto h-14 bg-[#F4F5F7] text-base font-light rounded-full border-none focus:outline-none focus:shadow-none" placeholder="Enter amount to add" required/>
+
+                                        <!-- Pin Number -->
+                                        <label class="opacity-70">Pin Number</label>
+                                        <input id="pin-number" type="password" class="input px-6 w-auto h-14 bg-[#F4F5F7] text-base font-light rounded-full border-none focus:outline-none focus:shadow-none" placeholder="Enter 4 digit pin number" required/>
+
+                                        <!-- Add money button -->
+                                        <button id="btn-add-money" class="btn bg-secondary-color mt-4 w-auto h-14 rounded-full text-xl text-white">Add Money</button>
+                                    </fieldset>
+                                </form>
+                                <!-- Add money form End -->
                             </div>
-
-                            <!-- Menu Buttons -->
-                            <div class="grid grid-cols-3 gap-4">
-                                <!-- Showing Add Money Button -->
-                                <button id="btn-show-add-money" class="btn btn-lg flex-col bg-transparent rounded-xl h-auto px-0 py-5 text-sm font-normal focus:border-[#0874F2]">
-                                    <img src="assets/img/wallet1.png" alt="">
-                                    <p class="opacity-70">Add Money</p>
-                                </button>
-
-                                <!-- Showing Cashout Button -->
-                                <button id="btn-show-cashout" class="btn btn-lg flex-col bg-transparent rounded-xl h-auto px-0 py-5 text-sm font-normal focus:border-[#0874F2]">
-                                    <img src="assets/img/send1.png" alt="">
-                                    <p class="opacity-70">Cashout</p>
-                                </button>
-
-                                <!-- Showing Transfer Money Button -->
-                                <button id="btn-show-transfer" class="btn btn-lg flex-col bg-transparent rounded-xl h-auto px-0 py-5 text-sm font-normal focus:border-[#0874F2]">
-                                    <img src="assets/img/money1.png" alt="">
-                                    <p class="opacity-70">Transfer Money</p>
-                                </button>
-
-                                <!-- Showing Get Bonus Button -->
-                                <button id="btn-show-bonus" class="btn btn-lg flex-col bg-transparent rounded-xl h-auto px-0 py-5 text-sm font-normal focus:border-[#0874F2]">
-                                    <img src="assets/img/bonus1.png" alt="">
-                                    <p class="opacity-70">Get Bonus</p>
-                                </button>
-
-                                <!-- Showing Pay Bill Button -->
-                                <button id="btn-show-pay-bill" class="btn btn-lg flex-col bg-transparent rounded-xl h-auto px-0 py-5 text-sm font-normal focus:border-[#0874F2]">
-                                    <img src="assets/img/purse1.png" alt="">
-                                    <p class="opacity-70">Pay Bill</p>
-                                </button>
-
-                                <!-- Showing Transactions Button -->
-                                <button id="btn-show-transactions" class="btn btn-lg flex-col bg-transparent rounded-xl h-auto px-0 py-5 text-sm font-normal focus:border-[#0874F2]">
-                                    <img src="assets/img/transaction1.png" alt="">
-                                    <p class="opacity-70">Transactions</p>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
+                        </section>
+                    <!-- Add Money Section End -->
 
 
-                    <!-- Add money form Start -->
-                    <div id="add-money-form" class="px-6 mt-8 pb-16">
-                        <h2 class="mb-5 text-lg font-semibold">Add Money</h2>
-                        <div class="card bg-white rounded-3xl shrink-0 shadow-xl">
-                            <form class="card-body p-8">
-                                <fieldset class="fieldset gap-3 text-base font-medium">
-                                    <!-- Select A Bank -->
-                                    <label class="opacity-70">Select A Bank</label>
-                                    <select class="select input px-6 w-auto h-14 bg-[#F4F5F7] text-base font-light rounded-full border-none focus:outline-none focus:shadow-none" required>
-                                        <option disabled selected>Select a bank</option>
-                                        <option>Islami Bank</option>
-                                        <option>NRBC Bank</option>
-                                        <option>Dutch Bangla Bank</option>
-                                    </select>
-
-                                    <!-- Bank Account Number -->
-                                    <label class="opacity-70">Bank Account Number</label>
-                                    <input type="text" class="input px-6 w-auto h-14 bg-[#F4F5F7] text-base font-light rounded-full border-none focus:outline-none focus:shadow-none" placeholder="Enter 11 digit account number"/>
-
-                                    <!-- Amount to add -->
-                                    <label class="opacity-70">Amount to Add</label>
-                                    <input id="adding-amount" type="text" class="input px-6 w-auto h-14 bg-[#F4F5F7] text-base font-light rounded-full border-none focus:outline-none focus:shadow-none" placeholder="Enter amount to add" required/>
-
-                                    <!-- Pin Number -->
-                                    <label class="opacity-70">Pin Number</label>
-                                    <input id="pin-number" type="password" class="input px-6 w-auto h-14 bg-[#F4F5F7] text-base font-light rounded-full border-none focus:outline-none focus:shadow-none" placeholder="Enter 4 digit pin number" required/>
-
-                                    <!-- Add money button -->
-                                    <button id="btn-add-money" class="btn bg-secondary-color mt-4 w-auto h-14 rounded-full text-xl text-white">Add Money</button>
-                                </fieldset>
-                            </form>
-                        </div>
-                    </div>
-                    <!-- Add money form End -->
-
-
-                    <!-- Cash Out form Start -->
-                    <div id="cashout-form" class="hidden px-6 mt-8 pb-16">
+                    <!-- Cash out Section Start -->
+                    <section id="cashout-section" class="hidden px-6 mt-8 pb-16">
                         <h2 class="mb-5 text-lg font-semibold">Cash Out</h2>
                         <div class="card bg-white rounded-3xl shrink-0 shadow-xl">
+                            <!-- Cash Out form Start -->
                             <form class="card-body p-8">
                                 <fieldset class="fieldset gap-3 text-base font-medium">
                                     <!-- Agent Number -->
@@ -160,9 +165,20 @@
                                     <button id="btn-withdraw-money" class="btn bg-secondary-color mt-4 w-auto h-14 rounded-full text-xl text-white">Withdraw Money</button>
                                 </fieldset>
                             </form>
+                            <!-- Cash Out form End -->
                         </div>
-                    </div>
-                    <!-- Cash Out form End -->
+                    </section>
+                    <!-- Cash out Section End -->
+
+
+                    <!-- Transaction Section Start -->
+                    <section id="transaction-section" class="hidden px-6 mt-8 pb-16">
+                        <h2 class="mb-5 text-lg font-semibold">Transaction History</h2>
+                        <div id="transaction-history" class="space-y-3">
+
+                        </div>
+                    </section>
+                    <!-- Transaction Section End -->
                 </div>
             </div>
         </main>
@@ -173,6 +189,7 @@
         <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
         <!-- Home JS file -->
         <!-- <script src="assets/js/home.js"></script> -->
+        <script src="assets/js/utilities.js"></script>
         <script src="assets/js/addMoney.js"></script>
         <script src="assets/js/cashOut.js"></script>
         <script src="assets/js/features.js"></script>
