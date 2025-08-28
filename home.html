@@ -171,6 +171,56 @@
                     <!-- Cash out Section End -->
 
 
+                    <!-- Transfer Money Section Start -->
+                    <section id="transfer-money-section" class="hidden px-6 mt-8 pb-16">
+                        <h2 class="mb-5 text-lg font-semibold">Transfer Money</h2>
+                        <div class="card bg-white rounded-3xl shrink-0 shadow-xl">
+                            <!-- Transfer money form Start -->
+                            <form class="card-body p-8">
+                                <fieldset class="fieldset gap-3 text-base font-medium">
+                                    <!-- User Account Number -->
+                                    <label class="opacity-70">User Account Number</label>
+                                    <input type="text" class="input px-6 w-auto h-14 bg-[#F4F5F7] text-base font-light rounded-full border-none focus:outline-none focus:shadow-none" placeholder="Enter 11 digit number"/>
+
+                                    <!-- Amount to Transfer -->
+                                    <label class="opacity-70">Amount</label>
+                                    <input id="transfer-amount" type="text" class="input px-6 w-auto h-14 bg-[#F4F5F7] text-base font-light rounded-full border-none focus:outline-none focus:shadow-none" placeholder="Enter amount to transfer" required/>
+
+                                    <!-- Pin Number -->
+                                    <label class="opacity-70">Pin Number</label>
+                                    <input id="transfer-pin-number" type="password" class="input px-6 w-auto h-14 bg-[#F4F5F7] text-base font-light rounded-full border-none focus:outline-none focus:shadow-none" placeholder="Enter 4 digit pin number" required/>
+
+                                    <!-- Transfer money button -->
+                                    <button id="btn-send-money" class="btn bg-secondary-color mt-4 w-auto h-14 rounded-full text-xl text-white">Send Money</button>
+                                </fieldset>
+                            </form>
+                            <!-- Transfer money form End -->
+                        </div>
+                    </section>
+                    <!-- Transfer Money Section End -->
+                    
+
+                    <!-- Get Bonus Section Start -->
+                    <section id="get-bonus-section" class="hidden px-6 mt-8 pb-16">
+                        <h2 class="mb-5 text-lg font-semibold">Get Bonus</h2>
+                        <div class="card bg-white rounded-3xl shrink-0 shadow-xl">
+                            <!-- Get Bonus form Start -->
+                            <form class="card-body p-8">
+                                <fieldset class="fieldset gap-3 text-base font-medium">
+                                    <!-- Bonus Coupon -->
+                                    <label class="opacity-70">Enter Bonus Coupon</label>
+                                    <input id="bonus-coupon" type="text" class="input px-6 w-auto h-14 bg-[#F4F5F7] text-base font-light rounded-full border-none focus:outline-none focus:shadow-none" placeholder="Enter your coupon" required/>
+
+                                    <!-- Get Bonus button -->
+                                    <button id="btn-get-bonus" class="btn bg-secondary-color mt-4 w-auto h-14 rounded-full text-xl text-white">Get Bonus</button>
+                                </fieldset>
+                            </form>
+                            <!-- Get Bonus form End -->
+                        </div>
+                    </section>
+                    <!-- Get Bonus Section End -->
+
+
                     <!-- Transaction Section Start -->
                     <section id="transaction-section" class="hidden px-6 mt-8 pb-16">
                         <h2 class="mb-5 text-lg font-semibold">Transaction History</h2>
@@ -192,6 +242,8 @@
         <script src="assets/js/utilities.js"></script>
         <script src="assets/js/addMoney.js"></script>
         <script src="assets/js/cashOut.js"></script>
+        <script src="assets/js/transferMoney.js"></script>
+        <script src="assets/js/getBonus.js"></script>
         <script src="assets/js/features.js"></script>
     </body>
 </html>

@@ -12,6 +12,20 @@ document.getElementById('btn-show-cashout')
     })
 
 
+// Displaying the transfer money form 
+document.getElementById('btn-show-transfer')
+    .addEventListener('click', function(){
+        showASection('transfer-money-section');
+    })
+
+
+// Displaying the get bonus form 
+document.getElementById('btn-show-bonus')
+    .addEventListener('click', function(){
+        showASection('get-bonus-section');
+    })
+
+
 // Displaying the transaction history 
 document.getElementById('btn-show-transactions')
     .addEventListener('click', function(){

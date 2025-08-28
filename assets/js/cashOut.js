@@ -7,7 +7,7 @@ document.getElementById('btn-withdraw-money').
         const cashoutAmount = getInputFieldValueById('cashout-amount');
         const cashoutPin = getInputFieldValueById('cashout-pin-number');
 
-        // Preventing form submit if th e input is a NaN
+        // Preventing form submit if the input is a NaN
         if (isNaN(cashoutAmount)) {
             alert('Please enter the cashout amount');
             return;

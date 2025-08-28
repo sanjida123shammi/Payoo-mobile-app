@@ -28,6 +28,8 @@ function clearInputField(id) {
 function showASection(id){
     document.getElementById('add-money-section').classList.add('hidden');
     document.getElementById('cashout-section').classList.add('hidden');
+    document.getElementById('transfer-money-section').classList.add('hidden');
+    document.getElementById('get-bonus-section').classList.add('hidden');
     document.getElementById('transaction-section').classList.add('hidden');
 
     // Show that section that has been clicked
